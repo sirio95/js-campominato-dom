@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+#campo{
+    width:520px;
+    height: 520px;
+    margin: 5px auto;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.box{
+    height:50px;
+    width:50px;
+    background-color: red;
+    margin: 1px;
+    border: 1px solid #000;
+    text-align: center;
+    vertical-align: middle;
+}
+.box.per10{
+    width:calc((520px - 20px) / 10);
+    height:calc((520px - 20px) / 10);
+}
+
+.box.per9{
+    width:calc((520px - 18px) / 9);
+    height:calc((520px - 18px) / 9);
+}
+.box.per7{
+    width:calc((520px - 14px) / 7);
+    height:calc((520px - 14px) / 7);
+}
+
+.col_nuovo{
+    background-color: lightskyblue;
+}
+
