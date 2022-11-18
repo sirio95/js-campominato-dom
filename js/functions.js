@@ -3,7 +3,7 @@
 function creazioneDiv (x, y, z){
     const newEl= document.createElement("div");
     newEl.classList.add("box", `${z}`);
-    //newEl.innerHTML += x;
+    newEl.innerHTML += x;
     y.append(newEl);
 }
  
@@ -13,18 +13,18 @@ function cambioCol(){
 }
 
 function randomNum(max, min){
-    return Math.floor(Math.random() * (max - min) + min);
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-function randomNumArr(num, maxN, minN){
-    const arrN= [];
-
-    while(arrN.length < num){
-        let numero= randomNum(maxN, minN);
-        if(!arrN.includes(numero)){
-            arrN.push(numero);
+function randomNumArr(ext, maxN, minN){
+    const arrNum= [];
+    let num= randomNum(maxN, minN);
+    while(arrNum.length<ext){
+        let num= randomNum(maxN, minN);
+        if(!arrNum.includes(num)){
+            arrNum.push(num);
         }
-    }
-    console.log(arrN);
+    }   
+    return arrNum;
 }
 

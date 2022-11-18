@@ -10,20 +10,25 @@ start.addEventListener('click',
         // creazione campo
 
         if(difficulty === 'beginner'){
-            const numeriRandom= randomNumArr(101, 100, 1); 
-            console.log(numeriRandom);
 
-            for (let i=1; i<101; i++){
+            const randomArr= randomNumArr(100, 100, 1);
+            
+            console.log(randomArr);
+
+            for(let i=1; i<101; i++){
                 const classe= "per10";
-                creazioneDiv(i, campo, classe);
+                creazioneDiv(randomArr[i-1], campo, classe);
             }
 
             const arrBox= document.getElementsByClassName("box");
-            
             console.log(arrBox);
+
+            
+            
 
             for(let i=0; i<arrBox.length; i++){
                 arrBox[i].addEventListener('click', cambioCol);
+
             }        
 
             
