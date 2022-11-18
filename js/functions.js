@@ -32,20 +32,36 @@ function randomNumArr(ext, maxN, minN){
     return arrNum;
 }
 
+
 function bomba(){
-    if(!started) {
-        return
-    }else{
-        this.classList.add('bomba');
-        const numero_vittorie=document.getElementsByClassName("safe");
-        alert("Hai perso! Il tuo punteggio è " + numero_vittorie.length);
-        return !started;
-    }
-    
+    this.classList.add('bomba');
+    const numero_vittorie=document.getElementsByClassName("safe");
+    alert("Hai perso! Il tuo punteggio è " + numero_vittorie.length);
 }
 
 function safe(){
-    if(!started) return;
     this.classList.add('safe');
-    
 }
+
+//BOMBA E SAFE CHE NON FUNZIONANO
+
+// function bomba(){
+//     if(started= false) {
+//         this.classList.add('bomba');
+//         const numero_vittorie=document.getElementsByClassName("safe");
+//         alert("Hai perso! Il tuo punteggio è " + numero_vittorie.length);
+//         return started=true;
+        
+//     }else{
+//         return
+//     }
+// }
+
+// function safe(){
+//     if(started= true) {
+//         return
+//     }else{
+//         this.classList.add('safe');
+//     } 
+    
+// }
