@@ -14,11 +14,12 @@
 .box{
     height:50px;
     width:50px;
-    background-color: red;
+    background-color: green;
     margin: 1px;
     border: 1px solid #000;
     text-align: center;
     vertical-align: middle;
+    color:transparent;
 }
 .box.per10{
     width:calc((520px - 20px) / 10);
@@ -34,7 +35,12 @@
     height:calc((520px - 14px) / 7);
 }
 
-.col_nuovo{
+.safe{
     background-color: lightskyblue;
+    color:#000;
+}
+.bomba{
+    background-color: red;
+    color:#000;
 }
 

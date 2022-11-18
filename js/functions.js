@@ -1,15 +1,19 @@
 //funzioni
 
-function creazioneDiv (x, y, z){
+function creazioneDiv (x, y, z, n){
     const newEl= document.createElement("div");
     newEl.classList.add("box", `${z}`);
     newEl.innerHTML += x;
-    y.append(newEl);
-}
- 
-function cambioCol(){
-     this.classList.toggle('col_nuovo');
-     console.log(this.innerHTML);
+    
+    if(x % n !== 0){
+        newEl.addEventListener("click", safe);
+        y.append(newEl);
+
+    }else if(x % n === 0){
+        newEl.addEventListener("click", bomba);
+        y.append(newEl);
+    }
+
 }
 
 function randomNum(max, min){
@@ -28,3 +32,14 @@ function randomNumArr(ext, maxN, minN){
     return arrNum;
 }
 
+function bomba(){
+    this.classList.add('bomba');
+    const numero_vittorie=document.getElementsByClassName("safe");
+    alert("Hai perso! Il tuo punteggio è " + numero_vittorie.length);
+    
+}
+
+function safe(){
+    this.classList.add('safe');
+    
+}
