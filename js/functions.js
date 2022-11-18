@@ -1,17 +1,17 @@
 //funzioni
 
-function creazioneDiv (x, y, z, n){
+function creazioneDiv (numeriBox, classeNumBox, classeDif, num16){
     const newEl= document.createElement("div");
-    newEl.classList.add("box", `${z}`);
-    newEl.innerHTML += x;
+    newEl.classList.add("box", `${classeDif}`);
+    newEl.innerHTML += numeriBox;
     
-    if(x % n !== 0){
+    if(numeriBox % num16 !== 0){
         newEl.addEventListener("click", safe);
-        y.append(newEl);
+        classeNumBox.append(newEl);
 
-    }else if(x % n === 0){
+    }else if(numeriBox % num16 === 0){
         newEl.addEventListener("click", bomba);
-        y.append(newEl);
+        classeNumBox.append(newEl);
     }
 
 }
@@ -33,12 +33,15 @@ function randomNumArr(ext, maxN, minN){
 }
 
 function bomba(){
-    if(!started) return;
-    this.classList.add('bomba');
-    const numero_vittorie=document.getElementsByClassName("safe");
-    alert("Hai perso! Il tuo punteggio è " + numero_vittorie.length);
+    if(!started) {
+        return
+    }else{
+        this.classList.add('bomba');
+        const numero_vittorie=document.getElementsByClassName("safe");
+        alert("Hai perso! Il tuo punteggio è " + numero_vittorie.length);
+        return !started;
+    }
     
-    return !started;
 }
 
 function safe(){
