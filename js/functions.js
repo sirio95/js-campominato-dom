@@ -1,16 +1,16 @@
 //funzioni
 
-function creazioneDiv (x, y, z, n, t){
+function creazioneDiv (x, y, z, n){
     const newEl= document.createElement("div");
     newEl.classList.add("box", `${z}`);
     newEl.innerHTML += x;
     
     if(x % n !== 0){
-        newEl.addEventListener("click", safe(t));
+        newEl.addEventListener("click", safe);
         y.append(newEl);
 
     }else if(x % n === 0){
-        newEl.addEventListener("click", bomba(t));
+        newEl.addEventListener("click", bomba);
         y.append(newEl);
     }
 
@@ -32,7 +32,7 @@ function randomNumArr(ext, maxN, minN){
     return arrNum;
 }
 
-function bomba(started){
+function bomba(){
     if(!started) return;
     this.classList.add('bomba');
     const numero_vittorie=document.getElementsByClassName("safe");
@@ -41,7 +41,7 @@ function bomba(started){
     return !started;
 }
 
-function safe(started){
+function safe(){
     if(!started) return;
     this.classList.add('safe');
     

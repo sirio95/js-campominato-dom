@@ -3,7 +3,7 @@ let started= false;
 
 start.addEventListener('click', 
     function(){
-        started = true;
+        
         let difficulty= document.getElementById('difficulty').value;
         const campo= document.getElementById('campo');
 
@@ -16,7 +16,7 @@ start.addEventListener('click',
 
             for(let i=1; i<101; i++){
                 const classe= "per10";
-                creazioneDiv(randomArr[i-1], campo, classe, 6, started);
+                creazioneDiv(randomArr[i-1], campo, classe, 6);
             }
 
         }else if(difficulty === 'intermediate'){
@@ -26,7 +26,7 @@ start.addEventListener('click',
 
             for(let i=1; i<82; i++){
                 const classe= "per9";
-                creazioneDiv(randomArr[i-1], campo, classe, 5, started);
+                creazioneDiv(randomArr[i-1], campo, classe, 5);
             }
 
         }else if(difficulty === 'hard'){
@@ -35,7 +35,7 @@ start.addEventListener('click',
 
             for(let i=1; i<50; i++){
                 const classe= "per7";
-                creazioneDiv(randomArr[i-1], campo, classe, 3, started);
+                creazioneDiv(randomArr[i-1], campo, classe, 3);
             }
         }
     }
