@@ -46,20 +46,19 @@ function safe(){
 //BOMBA E SAFE CHE NON FUNZIONANO
 
 // function bomba(){
-//     if(started= false) {
+//     if(!started) {
+//         return;        
+//     }else{
 //         this.classList.add('bomba');
 //         const numero_vittorie=document.getElementsByClassName("safe");
 //         alert("Hai perso! Il tuo punteggio è " + numero_vittorie.length);
-//         return started=true;
-        
-//     }else{
-//         return
+//         return !started;
 //     }
 // }
 
 // function safe(){
-//     if(started= true) {
-//         return
+//     if(!started) {
+//         return;
 //     }else{
 //         this.classList.add('safe');
 //     } 
